@@ -1,10 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="612.0" prefWidth="619.0" style="-fx-background-color: #96b6d4#96b6d4;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller">
    <children>
-      <Button fx:id="hm" layoutX="174.0" layoutY="117.0" mnemonicParsing="false" onAction="#change_admin" prefHeight="23.0" prefWidth="147.0" text="Accueil" />
+      <Button fx:id="id_admin" layoutX="489.0" layoutY="551.0" mnemonicParsing="false" onAction="#clickAdmin" prefHeight="25.0" prefWidth="102.0" style="-fx-background-color: red;" text="Admin Access" textFill="#fcfafa" />
+      <Button fx:id="id_chambres" layoutX="26.0" layoutY="105.0" mnemonicParsing="false" onAction="#clickChambres" style="-fx-background-color: #1f373d#1f373d;" text="CHAMBRES" textFill="#fffdfd" />
+      <Button fx:id="id_quisommesnous" layoutX="141.0" layoutY="105.0" mnemonicParsing="false" onAction="#clickQuiSommesNous" style="-fx-background-color: #1f373d#1f373d;" text="QUI SOMMES NOUS  ?" textFill="#fcf9f9" />
+      <Label layoutX="47.0" layoutY="27.0" prefHeight="61.0" prefWidth="520.0" text="Bienvenue chez Hotel Neptune***">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+      <Button fx:id="id_contact" layoutX="322.0" layoutY="105.0" mnemonicParsing="false" onAction="#clickContact" style="-fx-background-color: #1f373d#1f373d;" text="CONTACT" textFill="#fffefe" />
+      <Button fx:id="id_login" layoutX="439.0" layoutY="105.0" mnemonicParsing="false" onAction="#clickLogin" style="-fx-background-color: #1f373d#1f373d;" text="LOGIN" textFill="#f8f6f6" />
+      <Button fx:id="id_signup" layoutX="527.0" layoutY="105.0" mnemonicParsing="false" onAction="#clickSignUp" style="-fx-background-color: #1f373d#1f373d;" text="SIGNUP" textFill="#fcfafa" />
+      <ImageView fitHeight="379.0" fitWidth="628.0" layoutX="26.0" layoutY="150.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../Downloads/photo-1561501900-3701fa6a0864.jpeg" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>

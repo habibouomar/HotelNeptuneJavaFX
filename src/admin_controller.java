@@ -5,9 +5,7 @@ import java.sql.ResultSetMetaData;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ResourceBundle;
-
 import com.mysql.cj.protocol.Resultset;
-
 import Connectivity.ConnectionClass;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -48,48 +46,37 @@ public class admin_controller implements Initializable {
 	    @FXML
 	    private TextField textfield;
 	    
-	    /*public void button_client(ActionEvent e) {
-	    	Main.set_pane(1);
-	    }*/
-	    public void clickhome(ActionEvent e) {
+	  
+	    public void click(ActionEvent e) {
 	    	Main.set_pane(0);
 	    }
+	   
 	    @FXML
-	    public void ClickClient(ActionEvent event) throws SQLException {
+	    public void ClickClient(ActionEvent e) throws SQLException {
 	    	ConnectionClass connectnow = new ConnectionClass();
 	    	Connection connectiondb = connectnow.getConnection();
 	    	
-	    	String sql ="SELECT prenom FROM client ";
+	    	String sql ="SELECT * FROM client";
 	    	Statement statement = connectiondb.createStatement();
 	    	ResultSet resultSet = statement.executeQuery(sql);
+	    	
 	    	//ResultSetMetaData resultmetadata = resultSet.getMetaData();
 	    	 // int count = resultmetadata.getColumnCount();
 	    	/*for(int i=1; i<=count ; i++)
 	    	{
 	    		textfield.setText(resultmetadata.getColumnClassName(i));
 	    	} */
-	    	while(resultSet.next()) {
-	    		
-				textfield.setText("prenom");
-	    		
-	    	}
 	    	
-	    }
-	    	/*@Override
-	    	public  initialize(URL fxmlFileLocation,ResourceBundle resources)
-	    	{
-	    		
-	    	}*/
-	    
+	    	while(resultSet.next()) {
 
+                textfield.setText(resultSet.getString("prenom"));
+
+            }	
+	    }
+	  
 		@Override
 		public void initialize(URL arg0, ResourceBundle arg1) {
 			// TODO Auto-generated method stub
 			
-		}
-	    
-	
-	
-	
-	
+		}   
 }
